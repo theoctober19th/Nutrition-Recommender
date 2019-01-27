@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "43866203602",
+    "firebase_url": "https://nutrition-recommender.firebaseio.com",
+    "project_id": "nutrition-recommender",
+    "storage_bucket": "nutrition-recommender.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43866203602:android:940bd4c902c21b6f",
+        "android_client_info": {
+          "package_name": "com.ersathi.nutritionrecommender"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "43866203602-tmu6b9ghk6n9i87v0e5sn6pgt919hpt5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ersathi.nutritionrecommender",
+            "certificate_hash": "b8eab4abd451d7a3581b199a14b6c04308e26bea"
+          }
+        },
+        {
+          "client_id": "43866203602-577uhd6tu6ppjenpg65dn8su67vlck5h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt47AKPkbtQn76P8m1uBm_gN3SrFv5LrE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "43866203602-577uhd6tu6ppjenpg65dn8su67vlck5h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

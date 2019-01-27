@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Nutrition Recommender</string>
+    <string name="home_welcome_message">Welcome, Home!</string>
+    <string name="recommendation_message_placeholder">This is a reccommendation provided to you</string>
+
+
+    <string-array name="diseases_array">
+        <item>Diabetes</item>
+        <item>Hypertension</item>
+        <item>Breast Cancer</item>
+        <item>Gastritis</item>
+        <item>Piles</item>
+        <item>Ulcer</item>
+    </string-array>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="food_array">
+        <item>Pizza</item>
+        <item>Momo</item>
+        <item>Drumstick</item>
+        <item>Sausage</item>
+        <item>Makai</item>
+    </string-array>
+</resources>
+
