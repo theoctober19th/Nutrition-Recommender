@@ -1,6 +1,5 @@
 package com.ersathi.nutritionrecommender;
 
-import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -8,19 +7,20 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
-import com.ersathi.nutritionrecommender.fragments.home.HomePageFragment;
-import com.ersathi.nutritionrecommender.fragments.home.RecommendationFragment;
+import com.ersathi.nutritionrecommender.fragments.HomePageFragment;
+import com.ersathi.nutritionrecommender.fragments.FoodFragment;
+import com.ersathi.nutritionrecommender.fragments.MedicineFragment;
+import com.ersathi.nutritionrecommender.fragments.NutritionFragment;
+import com.ersathi.nutritionrecommender.fragments.WaterFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int NUM_PAGES = 2;
+    private static final int NUM_PAGES = 5;
     private ViewPager mViewPager;
     private PagerAdapter mPagerAdapter;
 
-    Button inputButton;
+
 
 //    protected void navigateForm(View view){
 //        Intent intent = new Intent(MainActivity.this, FormActivity.class);
@@ -40,15 +40,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void intializeViews() {
-        inputButton = findViewById(R.id.input_button);
-        inputButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FormActivity.class);
-                startActivity(intent);
-            }
-        });
-        }
+    }
+
 
     @Override
     public void onBackPressed() {
@@ -71,7 +64,13 @@ public class MainActivity extends AppCompatActivity {
                 case 0:
                     return new HomePageFragment();
                 case 1:
-                    return new RecommendationFragment();
+                    return new FoodFragment();
+                case 2:
+                    return new NutritionFragment();
+                case 3:
+                    return new WaterFragment();
+                case 4:
+                    return new MedicineFragment();
                 default:
                     return new HomePageFragment();
             }

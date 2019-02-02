@@ -1,4 +1,4 @@
-package com.ersathi.nutritionrecommender.fragments.home;
+package com.ersathi.nutritionrecommender.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,11 +8,11 @@ import android.view.ViewGroup;
 
 import com.ersathi.nutritionrecommender.R;
 
-public class HomePageFragment extends Fragment {
+public class MedicineFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_home, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_medicine, container, false);
         return rootView;
     }
 }

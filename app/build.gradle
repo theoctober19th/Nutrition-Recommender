@@ -30,6 +30,10 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.google.firebase:firebase-database:16.0.5'
+    implementation 'com.android.support:design:28.0.0'
+
+    //Graph Drawing Library
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
 }
 
 apply plugin: 'com.google.gms.google-services'

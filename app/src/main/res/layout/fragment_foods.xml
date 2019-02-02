@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:gravity="left"
+            android:text="Recommended Foods"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/recommended_food_scrollview"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:gravity="left"
+            android:text="Seasonal Foods"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recommended_food_scrollview" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/header2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/seasonal_food_scrollview"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/header3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:gravity="left"
+            android:text="Organic Foods"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/seasonal_food_scrollview" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/header3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/organic_food_scrollview"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/header4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:gravity="left"
+            android:text="Marketing Products"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/organic_food_scrollview" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/header4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/market_products_scrollview"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+                <include layout="@layout/cardview_food_recommendation"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>

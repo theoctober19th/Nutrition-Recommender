@@ -6,7 +6,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/recommendation_message_placeholder"
+        android:text="medicine"
         android:layout_margin="10dp"/>
 
 </ScrollView>

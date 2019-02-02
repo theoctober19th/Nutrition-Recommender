@@ -9,9 +9,18 @@ public class User {
     private double weight;
     private String favoriteFood;
     private String oftenFood;
+    private String disease;
 
 
     public User() {
+    }
+
+    public String getDisease() {
+        return disease;
+    }
+
+    public void setDisease(String disease) {
+        this.disease = disease;
     }
 
     public String getSex() {
