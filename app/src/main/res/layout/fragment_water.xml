@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/recommendation_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingTop="48dp">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -38,7 +39,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toLeftOf="@+id/add_button">
+                app:layout_constraintRight_toLeftOf="@+id/water_add_button">
 
                 <ImageView
                     android:layout_width="200dp"
@@ -47,18 +48,19 @@
                     android:src="@drawable/glass_of_water"/>
 
                 <TextView
+                    android:id="@+id/water_counter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="8"
-                    android:textSize="60sp"
-                    android:textColor="#ffffff"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/nunito_semibold"/>
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="8"
+                    android:textColor="#ffffff"
+                    android:textSize="60sp" />
 
             </FrameLayout>
 
             <android.support.design.widget.FloatingActionButton
-                android:id="@+id/add_button"
+                android:id="@+id/water_add_button"
                 app:layout_constraintLeft_toRightOf="@id/glassFrameLayout"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -77,58 +79,71 @@
             android:layout_margin="8dp"
             android:fontFamily="@font/nunito_semibold"
             android:gravity="left"
-            android:text="Yesterday"
+            android:text="History"
             android:textColor="@color/colorAccent"
             android:textSize="24sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/constraintLayout1" />
 
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/constraintLayout2"
+        <!--<android.support.constraint.ConstraintLayout-->
+            <!--android:id="@+id/constraintLayout2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--app:layout_constraintTop_toBottomOf="@id/header2"-->
+            <!--android:layout_margin="8dp">-->
+
+            <!--<FrameLayout-->
+                <!--android:id="@+id/glassFrameLayout2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:layout_constraintLeft_toLeftOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="parent"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="200dp"-->
+                    <!--android:layout_height="200dp"-->
+
+                    <!--android:src="@drawable/glass_of_water"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="8"-->
+                    <!--android:textSize="60sp"-->
+                    <!--android:textColor="#ffffff"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:fontFamily="@font/nunito_semibold"/>-->
+
+            <!--</FrameLayout>-->
+
+            <!--<android.support.constraint.ConstraintLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:layout_constraintTop_toTopOf="parent"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--app:layout_constraintLeft_toRightOf="@id/glassFrameLayout2"-->
+                <!--app:layout_constraintRight_toRightOf="parent">-->
+
+            <!--</android.support.constraint.ConstraintLayout>-->
+
+        <!--</android.support.constraint.ConstraintLayout>-->
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/water_chart"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/header2"
-            android:layout_margin="8dp">
+            android:layout_height="300dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout1">
 
-            <FrameLayout
-                android:id="@+id/glassFrameLayout2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toLeftOf="@+id/waterstatus">
-
-                <ImageView
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-
-                    android:src="@drawable/glass_of_water"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="8"
-                    android:textSize="60sp"
-                    android:textColor="#ffffff"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/nunito_semibold"/>
-
-            </FrameLayout>
-
-            <android.support.constraint.ConstraintLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/glassFrameLayout2"
-                app:layout_constraintRight_toRightOf="parent">
-
-            </android.support.constraint.ConstraintLayout>
-
-        </android.support.constraint.ConstraintLayout>
+        </com.github.mikephil.charting.charts.LineChart>
 
 
     </android.support.constraint.ConstraintLayout>

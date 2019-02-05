@@ -1,12 +1,17 @@
 package com.ersathi.nutritionrecommender;
 
+import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TableLayout;
 
 import com.ersathi.nutritionrecommender.fragments.HomePageFragment;
 import com.ersathi.nutritionrecommender.fragments.FoodFragment;
@@ -19,7 +24,15 @@ public class MainActivity extends AppCompatActivity {
     private static final int NUM_PAGES = 5;
     private ViewPager mViewPager;
     private PagerAdapter mPagerAdapter;
+    private TabLayout mSlidingPageTabLayout;
 
+    private int[] iconImageResId = {
+            R.drawable.ic_home_black_24dp,
+            R.drawable.ic_diet_24_dp,
+            R.drawable.ic_chart_24_dp,
+            R.drawable.ic_water_drop_24_dp,
+            R.drawable.ic_access_alarms_black_24dp
+    };
 
 
 //    protected void navigateForm(View view){
@@ -35,6 +48,19 @@ public class MainActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.slide_pager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mPagerAdapter);
+
+        mSlidingPageTabLayout = findViewById(R.id.sliding_tabs);
+        mSlidingPageTabLayout.setupWithViewPager(mViewPager);
+
+        for (int i = 0; i < iconImageResId.length; i++) {
+            mSlidingPageTabLayout.getTabAt(i).setIcon(iconImageResId[i]);
+//            mSlidingPageTabLayout.getTabAt(i).getCustomView().setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//
+//                }
+//            });
+        }
 
         intializeViews();
     }
@@ -52,7 +78,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter{
+    private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
+
+        private String[] pageTitles = {"Home", "Food", "Nutrition", "Water", "Medicine"};
 
         public ScreenSlidePagerAdapter(FragmentManager fm) {
             super(fm);
@@ -79,6 +107,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             return NUM_PAGES;
+        }
+
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return null;
         }
     }
 }
