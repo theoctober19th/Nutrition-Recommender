@@ -20,11 +20,12 @@
     </string-array>
 
     <string-array name="food_array">
-        <item>Pizza</item>
-        <item>Momo</item>
-        <item>Drumstick</item>
-        <item>Sausage</item>
-        <item>Makai</item>
+        <item>Popcorn</item>
+        <item>Meat</item>
+        <item>Rice and Apple</item>
+        <item>Snacks, Chips</item>
+        <item>Mollusks, Scallop</item>
+        <item>Butter</item>
     </string-array>
 </resources>
 
