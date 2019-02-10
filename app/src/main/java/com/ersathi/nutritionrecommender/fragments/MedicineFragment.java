@@ -47,7 +47,7 @@ public class MedicineFragment extends Fragment {
 
 
     private void deleteMedicine(){
-        mLocalDatabase.execSQL("DELETE FROM medicinces WHERE ");
+        //mLocalDatabase.execSQL("DELETE FROM medicinces WHERE ");
     }
 
 
