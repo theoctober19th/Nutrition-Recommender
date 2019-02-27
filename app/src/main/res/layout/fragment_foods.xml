@@ -131,11 +131,18 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <include layout="@layout/cardview_food_recommendation"/>
-                <include layout="@layout/cardview_food_recommendation"/>
-                <include layout="@layout/cardview_food_recommendation"/>
-                <include layout="@layout/cardview_food_recommendation"/>
-                <include layout="@layout/cardview_food_recommendation"/>
+                <!--<include layout="@layout/cardview_food_recommendation"/>-->
+                <!--<include layout="@layout/cardview_food_recommendation"/>-->
+                <!--<include layout="@layout/cardview_food_recommendation"/>-->
+                <!--<include layout="@layout/cardview_food_recommendation"/>-->
+                <!--<include layout="@layout/cardview_food_recommendation"/>-->
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/organic_food_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
 
             </LinearLayout>
 
@@ -169,11 +176,18 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <include layout="@layout/cardview_food_recommendation"/>
-                <include layout="@layout/cardview_food_recommendation"/>
-                <include layout="@layout/cardview_food_recommendation"/>
-                <include layout="@layout/cardview_food_recommendation"/>
-                <include layout="@layout/cardview_food_recommendation"/>
+                <!--<include layout="@layout/cardview_food_recommendation"/>-->
+                <!--<include layout="@layout/cardview_food_recommendation"/>-->
+                <!--<include layout="@layout/cardview_food_recommendation"/>-->
+                <!--<include layout="@layout/cardview_food_recommendation"/>-->
+                <!--<include layout="@layout/cardview_food_recommendation"/>-->
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/marketing_product_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
 
             </LinearLayout>
 

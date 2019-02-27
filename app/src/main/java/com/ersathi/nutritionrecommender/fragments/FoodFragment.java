@@ -20,8 +20,17 @@ public class FoodFragment extends Fragment {
 
     RecyclerView mRecommendedFoodList;
     LinearLayout mRecommendedFoodContainerLayout;
-    FoodAdapter mFoodAdapter;
+    FoodAdapter mRecommendedFoodAdapter;
     SQLiteDatabase mLocalDatabase;
+
+    RecyclerView mSeasonalFoodList;
+    FoodAdapter mSeasonalFoodAdapter;
+
+    RecyclerView mOrganicFoodList;
+    FoodAdapter mOrganicFoodAdapter;
+
+    RecyclerView mMarketingProductList;
+    FoodAdapter mMarketingProductAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -31,8 +40,22 @@ public class FoodFragment extends Fragment {
 
         mRecommendedFoodList.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         mLocalDatabase = new DBHelper(getContext()).getWritableDatabase();
-        mFoodAdapter = new FoodAdapter(getContext(), mLocalDatabase);
-        mRecommendedFoodList.setAdapter(mFoodAdapter);
+        mRecommendedFoodAdapter = new FoodAdapter(getContext(), mLocalDatabase, "asc");
+        mRecommendedFoodList.setAdapter(mRecommendedFoodAdapter);
+
+
+        mSeasonalFoodList.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        mSeasonalFoodAdapter = new FoodAdapter(getContext(), mLocalDatabase, "desc");
+        mSeasonalFoodList.setAdapter(mSeasonalFoodAdapter);
+
+        mOrganicFoodList.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        mOrganicFoodAdapter = new FoodAdapter(getContext(), mLocalDatabase, "organic");
+        mOrganicFoodList.setAdapter(mOrganicFoodAdapter);
+
+        mMarketingProductList.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        mMarketingProductAdapter = new FoodAdapter(getContext(), mLocalDatabase, "marketing");
+        mMarketingProductList.setAdapter(mMarketingProductAdapter);
+
 
         //addDummyData();
 
@@ -76,6 +99,12 @@ public class FoodFragment extends Fragment {
     private void initializeViews(ViewGroup rootView) {
         mRecommendedFoodContainerLayout = rootView.findViewById(R.id.recommended_food_linear_layout);
         mRecommendedFoodList = rootView.findViewById(R.id.recommended_food_recyclerview);
+
+        mSeasonalFoodList = rootView.findViewById(R.id.seasonal_food_recyclerview);
+
+        mOrganicFoodList = rootView.findViewById(R.id.organic_food_recyclerview);
+
+        mMarketingProductList = rootView.findViewById(R.id.marketing_product_recyclerview);
     }
 
     private void setMargins (View view, int left, int top, int right, int bottom) {

@@ -30,17 +30,39 @@ public class FoodAdapter extends /*FirebaseRecyclerAdapter<Food, FoodAdapter.Foo
 //        super(options);
 //    }
 
-    public FoodAdapter(Context context, SQLiteDatabase database){
+    public FoodAdapter(Context context, SQLiteDatabase database, String order){
         this.mContext = context;
         this.mDatabase = database;
-        mCursor = getFoodList();
+        mCursor = getFoodList(order);
     }
 
-    private Cursor getFoodList(){
-        return mDatabase.rawQuery(
-                "SELECT * FROM dummy_foods;",
-                null
-        );
+    private Cursor getFoodList(String order){
+        if(order.equals("asc")){
+            return mDatabase.rawQuery(
+                    "SELECT * FROM dummy_foods;",
+                    null
+            );
+        }else if(order.equals("desc")){
+            return mDatabase.rawQuery(
+                    "SELECT * FROM dummy_foods ORDER BY (name) DESC;",
+                    null
+            );
+        }else if(order.equals("organic")){
+            return mDatabase.rawQuery(
+                    "SELECT * FROM organic_foods;",
+                    null
+            );
+        }else if(order.equals("marketing")){
+            return mDatabase.rawQuery(
+                    "SELECT * FROM marketing_products;",
+                    null
+            );
+        }else{
+            return mDatabase.rawQuery(
+                    "SELECT * FROM dummy_foods;",
+                    null
+            );
+        }
     }
 
 //
